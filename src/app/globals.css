@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+@import "../styles/theme.css";
+
+:root {
+  /* PayTrack Design Tokens mapped to central theme in src/styles/theme.css */
+  --pt-canvas: var(--brand-canvas);
+  --pt-surface: var(--brand-surface);
+  --pt-surface-hover: #EFEBF3;
+  --pt-text-primary: var(--brand-text-main);
+  --pt-text-secondary: var(--brand-text-secondary);
+  --pt-text-muted: var(--brand-text-muted);
+  
+  --pt-navbar: var(--brand-dark);
+  --pt-accent: var(--brand-primary);
+  --pt-accent-hover: var(--brand-primary-hover);
+  --pt-accent-soft: var(--brand-primary-soft);
+  --pt-accent-deep: #B48C2E;
+  --pt-lime: var(--brand-primary);
+  --pt-lime-hover: var(--brand-primary-hover);
+  --pt-lime-soft: var(--brand-primary-soft);
+  
+  --pt-border: var(--brand-border);
+  --pt-border-subtle: #F2EFF5;
+  --pt-border-strong: #D8CFE0;
+  
+  --pt-danger: #E11D48;
+  --pt-warning: #D97706;
+  --pt-success: #0D9488;
+
+  --pt-radius-pill: 999px;
+  --pt-radius-card: 24px;
+}
+
+@theme {
+  --color-brand: var(--brand-primary);
+  --color-brand-hover: var(--brand-primary-hover);
+  --color-brand-soft: var(--brand-primary-soft);
+  --color-brand-border: var(--brand-primary-border);
+  --color-brand-glow: var(--brand-primary-glow);
+  --color-brand-text: var(--brand-primary-text);
+  --color-brand-dark: var(--brand-dark);
+  --color-brand-dark-surface: var(--brand-dark-surface);
+  --color-brand-dark-border: var(--brand-dark-border);
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  background-color: var(--pt-canvas);
+  color: var(--pt-text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Tabular numerals for financial amounts */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Very subtle background grid behind hero preview fading toward edges */
+.hero-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.025) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 60%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 60%, transparent 100%);
+}
+
+/* Smooth ambient atmospheric pulse */
+@keyframes ambient-pulse {
+  0%, 100% {
+    opacity: 0.12;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 0.24;
+    transform: translate(-50%, -50%) scale(1.08);
+  }
+}
+
+.animate-ambient-glow {
+  animation: ambient-pulse 8s ease-in-out infinite;
+}
+
+/* Floating card subtle oscillation with spring-like bezier */
+@keyframes float-subtle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes float-alt {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+.animate-float {
+  animation: float-subtle 6s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+}
+
+.animate-float-alt {
+  animation: float-alt 7s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+}
+
+/* Interactive card hover lift with smooth shadow dissipation */
+.card-hover-lift {
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.24s ease;
+}
+
+.card-hover-lift:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 36px -10px var(--brand-primary-glow);
+  border-color: var(--brand-primary);
+}
+
+/* Unified button micro-interaction tokens */
+.btn-primary {
+  background-color: var(--brand-primary);
+  color: var(--brand-primary-text);
+  font-weight: 700;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.24s ease,
+              border-color 0.24s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--brand-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -4px var(--brand-primary-glow);
+}
+
+.btn-primary:active {
+  transform: translateY(0px) scale(0.98);
+}
+
+.btn-secondary {
+  background-color: #FFFFFF;
+  color: #15121A;
+  border: 1px solid var(--pt-border);
+  font-weight: 600;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.24s ease,
+              border-color 0.24s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--pt-surface);
+  border-color: var(--brand-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.06);
+}
+
+.btn-secondary:active {
+  transform: translateY(0px) scale(0.98);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .animate-float, .animate-float-alt, .animate-ambient-glow {
+    animation: none !important;
+  }
+}

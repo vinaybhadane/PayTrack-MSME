@@ -1,0 +1,107 @@
+/* =============================================================================
+   🎨 PAYTRACK CENTRAL THEME CONFIGURATION
+   =============================================================================
+   To change website theme colors, you ONLY need to edit this file!
+   All components, headers, buttons, badges, highlights, and borders across the
+   entire website will automatically reflect your changes.
+
+   PRESETS AVAILABLE (Uncomment one or put your custom hex code below):
+   -----------------------------------------------------------------------------
+   Option 1: Sunflower Gold (#FFD758) [CURRENT ACTIVE]
+   Option 2: Amethyst Lavender (#9E7EB5)
+   Option 3: Mint Teal (#0D9488)
+   Option 4: Royal Blue (#3B82F6)
+   ============================================================================= */
+
+:root {
+  /* ---------------------------------------------------------------------------
+     1. PRIMARY ACCENT COLOR (The main theme color used site-wide)
+     --------------------------------------------------------------------------- */
+  --brand-primary: #FFD758;            /* Main accent color */
+  --brand-primary-hover: #F2C842;      /* Hover color for buttons & active links */
+  --brand-primary-soft: rgba(255, 215, 88, 0.15); /* Soft translucent tint for badges/tabs */
+  --brand-primary-border: rgba(255, 215, 88, 0.45); /* Glowing border color */
+  --brand-primary-glow: rgba(255, 215, 88, 0.28); /* Ambient shadow / glow color */
+  --brand-primary-text: #15121A;       /* Text color inside primary buttons/badges */
+
+  /* ---------------------------------------------------------------------------
+     2. DARK FOUNDATION (Navbar, Footer, Dark Card Bezel)
+     --------------------------------------------------------------------------- */
+  --brand-dark: #15121B;               /* Deep obsidian background for header & footer */
+  --brand-dark-surface: #1C1724;       /* Inner dark preview panels */
+  --brand-dark-border: #292434;        /* Dark card borders */
+
+  /* ---------------------------------------------------------------------------
+     3. LIGHT FOUNDATION & TEXT
+     --------------------------------------------------------------------------- */
+  --brand-canvas: #FFFFFF;             /* Page background */
+  --brand-surface: #F9F7FA;            /* Secondary section / card background */
+  --brand-border: #E9E4ED;             /* Light gray borders */
+  --brand-text-main: #15121A;          /* Main headings */
+  --brand-text-secondary: #665F70;     /* Body copy */
+  --brand-text-muted: #958D9E;         /* Timestamps, captions */
+}
+
+/* -----------------------------------------------------------------------------
+   UTILITY CLASSES DRIVEN BY CENTRAL THEME TOKENS
+   ----------------------------------------------------------------------------- */
+.bg-brand {
+  background-color: var(--brand-primary) !important;
+}
+
+.text-brand {
+  color: var(--brand-primary) !important;
+}
+
+.border-brand {
+  border-color: var(--brand-primary) !important;
+}
+
+.hover\:text-brand:hover {
+  color: var(--brand-primary) !important;
+}
+
+.hover\:border-brand:hover {
+  border-color: var(--brand-primary) !important;
+}
+
+.hover\:bg-brand-hover:hover {
+  background-color: var(--brand-primary-hover) !important;
+}
+
+.bg-brand-soft {
+  background-color: var(--brand-primary-soft) !important;
+}
+
+.border-brand-glow {
+  border-color: var(--brand-primary-border) !important;
+}
+
+.hover\:border-brand-glow:hover {
+  border-color: var(--brand-primary-border) !important;
+}
+
+.shadow-brand-glow {
+  box-shadow: 0 10px 25px -4px var(--brand-primary-glow) !important;
+}
+
+.hover\:shadow-brand-glow:hover {
+  box-shadow: 0 14px 30px -4px var(--brand-primary-glow) !important;
+}
+
+.btn-brand-primary {
+  background-color: var(--brand-primary);
+  color: var(--brand-primary-text);
+  font-weight: 700;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-brand-primary:hover {
+  background-color: var(--brand-primary-hover);
+  box-shadow: 0 10px 25px -4px var(--brand-primary-glow);
+  transform: translateY(-2px);
+}
+
+.btn-brand-primary:active {
+  transform: translateY(0) scale(0.98);
+}
