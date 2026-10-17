@@ -22,6 +22,8 @@ export const metadata: Metadata = {
   authors: [{ name: "PayTrack Team" }],
 };
 
+import { AuthProvider } from "@/context/AuthContext";
+
 export default function RootLayout({
   children,
 }: {
@@ -30,8 +32,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full scroll-smooth">
       <body className="min-h-full flex flex-col bg-white text-[#171717] antialiased">
-        {children}
-        <CookieConsent />
+        <AuthProvider>
+          {children}
+          <CookieConsent />
+        </AuthProvider>
       </body>
     </html>
   );

@@ -147,20 +147,18 @@ export function MarketingHeader() {
 
           {/* Right CTA Actions with subtle hover lift and active scale */}
           <div className="hidden md:flex items-center gap-3">
-            <a
-              href="#preview"
-              onClick={(e) => scrollTo(e, "preview")}
+            <Link
+              href="/login"
               className="text-[14px] font-medium text-white px-4 py-2 rounded-full border border-[#3A3347] hover:border-brand hover:text-brand transition-all duration-300 ease-out hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
             >
               Sign In
-            </a>
-            <a
-              href="#preview"
-              onClick={(e) => scrollTo(e, "preview")}
+            </Link>
+            <Link
+              href="/signup"
               className="inline-flex items-center gap-1.5 px-5 py-2 rounded-full bg-brand hover:bg-brand-hover text-[#15121A] text-[14px] font-bold shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-brand-glow active:translate-y-0 active:scale-[0.98]"
             >
               <span>Create Account</span>
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Hamburger Button with animated icon rotation */}
@@ -212,20 +210,20 @@ export function MarketingHeader() {
                   </a>
                 ))}
                 <div className="pt-3 mt-1 border-t border-[#292434] flex flex-col gap-2.5">
-                  <a
-                    href="#preview"
-                    onClick={(e) => scrollTo(e, "preview")}
+                  <Link
+                    href="/login"
+                    onClick={() => setMobileMenuOpen(false)}
                     className="w-full text-center py-2.5 text-sm font-medium text-white rounded-full border border-[#3A3347] hover:border-brand hover:text-brand transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
                   >
                     Sign In
-                  </a>
-                  <a
-                    href="#preview"
-                    onClick={(e) => scrollTo(e, "preview")}
+                  </Link>
+                  <Link
+                    href="/signup"
+                    onClick={() => setMobileMenuOpen(false)}
                     className="w-full text-center py-2.5 rounded-full bg-brand text-[#15121A] text-sm font-bold shadow-md hover:bg-brand-hover transition-all duration-300 hover:-translate-y-0.5 hover:shadow-brand-glow active:translate-y-0 active:scale-[0.98]"
                   >
                     Create Account
-                  </a>
+                  </Link>
                 </div>
               </nav>
             </motion.div>

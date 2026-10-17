@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { ProductPreview } from "./ProductPreview";
 import { ScrollReveal } from "@/components/common/ScrollReveal";
@@ -38,14 +39,13 @@ export function HeroSection() {
 
           {/* Dual Pill Calls to Action (~52px height, 14–18px gap) */}
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="#preview"
-              onClick={(e) => scrollTo(e, "preview")}
+            <Link
+              href="/signup"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 h-[52px] rounded-full bg-brand hover:bg-brand-hover text-[#15121A] text-[15px] font-bold shadow-sm transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-brand-glow active:translate-y-0 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand"
             >
               <span>Get Started</span>
               <ArrowRight className="w-4 h-4 stroke-[2.2]" />
-            </a>
+            </Link>
 
             <a
               href="#workflow"

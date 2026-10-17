@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { ArrowRight, ShieldCheck } from "lucide-react";
 import { ScrollReveal } from "@/components/common/ScrollReveal";
 
@@ -38,14 +39,13 @@ export function FinalCTA() {
               </p>
 
               <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3.5">
-                <a
-                  href="#preview"
-                  onClick={(e) => scrollTo(e, "preview")}
+                <Link
+                  href="/signup"
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-brand hover:bg-brand-hover text-[#15121A] text-sm font-extrabold shadow-md hover:shadow-brand-glow transition-all duration-300 ease-out hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]"
                 >
                   <span>Get Started</span>
                   <ArrowRight className="w-4 h-4 stroke-[2.5]" />
-                </a>
+                </Link>
 
                 <a
                   href="#workflow"
