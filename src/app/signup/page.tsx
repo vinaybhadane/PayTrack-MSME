@@ -255,7 +255,7 @@ function SignupForm() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0F0D13] flex flex-col justify-center py-12 sm:px-6 lg:px-8 relative overflow-hidden hero-grid-pattern">
+    <div className="min-h-screen bg-[#0F0D13] flex flex-col justify-center py-12 sm:px-6 lg:px-8 relative overflow-hidden">
       <div className="sm:mx-auto sm:w-full sm:max-w-md relative z-10 px-4">
         {/* Logo and header */}
         <div className="text-center mb-6">
@@ -516,7 +516,7 @@ function SignupForm() {
                   <button
                     type="submit"
                     disabled={submitting}
-                    className="w-full mt-3 inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-brand hover:bg-brand-hover text-[#15121A] text-sm font-bold shadow-md transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-brand-glow active:translate-y-0 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full mt-3 inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-brand hover:bg-brand-hover text-[#15121A] text-sm font-bold shadow-md transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {submitting ? (
                       <div className="w-5 h-5 border-2 border-[#15121A] border-t-transparent rounded-full animate-spin" />
@@ -578,7 +578,7 @@ function SignupForm() {
                           onKeyDown={(e) => handleOtpKeyDown(index, e)}
                           className={`w-11 h-13 sm:w-12 sm:h-14 text-center text-xl sm:text-2xl font-bold rounded-xl bg-[#1C1724] border text-white transition-all duration-200 focus:outline-none ${
                             digit
-                              ? "border-brand shadow-[0_0_12px_var(--brand-primary-glow)] bg-[#251F30]"
+                              ? "border-brand bg-[#251F30]"
                               : "border-[#292434] focus:border-brand focus:ring-1 focus:ring-brand"
                           }`}
                         />
@@ -609,7 +609,7 @@ function SignupForm() {
                   <button
                     type="submit"
                     disabled={submitting || otpValues.join("").length !== 6}
-                    className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-brand hover:bg-brand-hover text-[#15121A] text-sm font-bold shadow-md transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-brand-glow active:translate-y-0 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-brand hover:bg-brand-hover text-[#15121A] text-sm font-bold shadow-md transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {submitting ? (
                       <div className="w-5 h-5 border-2 border-[#15121A] border-t-transparent rounded-full animate-spin" />

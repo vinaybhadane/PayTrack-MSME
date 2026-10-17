@@ -90,7 +90,7 @@ function LoginForm() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0F0D13] flex flex-col justify-center py-12 sm:px-6 lg:px-8 relative overflow-hidden hero-grid-pattern">
+    <div className="min-h-screen bg-[#0F0D13] flex flex-col justify-center py-12 sm:px-6 lg:px-8 relative overflow-hidden">
       <div className="sm:mx-auto sm:w-full sm:max-w-md relative z-10 px-4">
         {/* Brand Logo & Back to Landing */}
         <div className="text-center mb-8">
@@ -266,7 +266,7 @@ function LoginForm() {
             <button
               type="submit"
               disabled={submitting || googleSubmitting}
-              className="w-full mt-2 inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-brand hover:bg-brand-hover text-[#15121A] text-sm font-bold shadow-md transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-brand-glow active:translate-y-0 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full mt-2 inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-brand hover:bg-brand-hover text-[#15121A] text-sm font-bold shadow-md transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {submitting ? (
                 <div className="w-5 h-5 border-2 border-[#15121A] border-t-transparent rounded-full animate-spin" />
