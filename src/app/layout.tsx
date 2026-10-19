@@ -33,12 +33,17 @@ export const metadata: Metadata = {
   publisher: "PayTrack MSME",
   icons: {
     icon: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon.ico" },
+      { url: "/favicon.ico?v=3", sizes: "any" },
+      { url: "/favicon-32x32.png?v=3", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png?v=3", sizes: "16x16", type: "image/png" },
+      { url: "/favicon.svg?v=3", type: "image/svg+xml" },
     ],
-    shortcut: "/favicon.svg",
-    apple: "/favicon.svg",
+    shortcut: "/favicon.ico?v=3",
+    apple: [
+      { url: "/apple-touch-icon.png?v=3", sizes: "180x180", type: "image/png" },
+    ],
   },
+  manifest: "/site.webmanifest",
   openGraph: {
     title: "PayTrack MSME — B2B Receivables & Payment Workflow Platform",
     description:
@@ -83,6 +88,13 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full scroll-smooth">
       <head>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico?v=3" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=3" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=3" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=3" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=3" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="theme-color" content="#15121B" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
