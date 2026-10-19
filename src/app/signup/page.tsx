@@ -424,7 +424,7 @@ function SignupForm() {
                         id="signup-name"
                         type="text"
                         required
-                        placeholder="Rajesh Sharma"
+                        placeholder="Vinay Bhadane"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         className="w-full pl-10 pr-4 py-2.5 bg-[#1C1724] border border-[#292434] rounded-xl text-white placeholder-[#665F70] text-sm focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition-colors"
@@ -446,7 +446,7 @@ function SignupForm() {
                         id="signup-email"
                         type="email"
                         required
-                        placeholder="rajesh@sharma-metals.com"
+                        placeholder="vinay@bhadane-msme.in"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         className="w-full pl-10 pr-4 py-2.5 bg-[#1C1724] border border-[#292434] rounded-xl text-white placeholder-[#665F70] text-sm focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition-colors"
@@ -473,7 +473,7 @@ function SignupForm() {
                       <input
                         id="signup-company"
                         type="text"
-                        placeholder="Sharma Precision Components Pvt Ltd"
+                        placeholder="Bhadane Precision Components Pvt Ltd"
                         value={company}
                         onChange={(e) => setCompany(e.target.value)}
                         className="w-full pl-10 pr-4 py-2.5 bg-[#1C1724] border border-[#292434] rounded-xl text-white placeholder-[#665F70] text-sm focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition-colors"

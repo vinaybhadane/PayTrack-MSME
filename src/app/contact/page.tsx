@@ -125,7 +125,7 @@ export default function ContactPage() {
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      placeholder="Rajesh Verma"
+                      placeholder="Vinay Bhadane"
                       className="w-full px-4 py-3 rounded-xl bg-white border border-[#E9E4ED] text-sm text-[#15121A] focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition-colors"
                     />
                   </div>
@@ -140,7 +140,7 @@ export default function ContactPage() {
                         required
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        placeholder="rajesh@precisiontools.in"
+                        placeholder="vinay@bhadane-tools.in"
                         className="w-full px-4 py-3 rounded-xl bg-white border border-[#E9E4ED] text-sm text-[#15121A] focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition-colors"
                       />
                     </div>
@@ -152,7 +152,7 @@ export default function ContactPage() {
                         type="text"
                         value={formData.company}
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                        placeholder="Precision Tools MSME"
+                        placeholder="Bhadane Precision Tools MSME"
                         className="w-full px-4 py-3 rounded-xl bg-white border border-[#E9E4ED] text-sm text-[#15121A] focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition-colors"
                       />
                     </div>

@@ -137,8 +137,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         const demoUser: AuthUser = {
           uid: `demo_${Date.now()}`,
           email: email.trim(),
-          displayName: email.split("@")[0],
-          company: "Demo Enterprises Ltd",
+          displayName: "Vinay Bhadane",
+          company: "Bhadane Enterprises Ltd",
         };
         setUser(demoUser);
         localStorage.setItem(LOCAL_STORAGE_USER_KEY, JSON.stringify(demoUser));
@@ -168,9 +168,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         // Fallback Google login in demo mode
         const demoUser: AuthUser = {
           uid: `google_demo_${Date.now()}`,
-          email: "google.user@example.com",
-          displayName: "Google Verified Supplier",
-          company: "Apex Precision Tools",
+          email: "vinay.bhadane@example.com",
+          displayName: "Vinay Bhadane",
+          company: "Bhadane Precision Tools",
           photoURL: "",
         };
         setUser(demoUser);
@@ -216,7 +216,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           uid: `user_${Date.now()}`,
           email: email.trim(),
           displayName: name.trim(),
-          company: company?.trim() || "Independent MSME",
+          company: company?.trim() || "Bhadane Precision MSME",
         };
         setUser(demoUser);
         localStorage.setItem(LOCAL_STORAGE_USER_KEY, JSON.stringify(demoUser));

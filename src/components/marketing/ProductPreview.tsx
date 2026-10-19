@@ -196,19 +196,19 @@ export function ProductPreview() {
             <div className="flex items-center justify-between pb-4 border-b border-[#E9E4ED]">
               <div>
                 <h3 className="font-extrabold text-lg sm:text-[22px] text-[#15121A] flex items-center gap-1.5 tracking-tight">
-                  Welcome back, Rajesh
+                  Welcome back, Vinay
                 </h3>
                 <p className="text-xs sm:text-[13px] text-[#665F70]">
-                  Precision Tools MSME · Today&apos;s receivables overview
+                  Bhadane Precision MSME · Today&apos;s receivables overview
                 </p>
               </div>
 
               <div className="flex items-center gap-2 bg-white px-3 py-1.5 rounded-full border border-[#E9E4ED] shadow-2xs">
                 <div className="w-6 h-6 rounded-full bg-[#15121B] text-brand font-bold text-[10px] flex items-center justify-center">
-                  RV
+                  VB
                 </div>
                 <span className="text-xs font-semibold text-[#15121A] hidden sm:inline">
-                  Rajesh Verma
+                  Vinay Bhadane
                 </span>
                 <ChevronDown className="w-3.5 h-3.5 text-[#665F70]" />
               </div>
